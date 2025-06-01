@@ -298,18 +298,15 @@
     </div>
 
     <div class="galaxy-container" id="galaxy">
-        <!-- Các text particles sẽ được tạo bằng JavaScript -->
     </div>
 
     <audio id="galaxyAudio" controls style="display:none"></audio>
 
     <script type="module">
-        // Mock Firebase functions để website chạy được trong môi trường demo
         const mockFirebase = {
             db: {},
             doc: (collection, id) => ({ collection, id }),
             getDoc: async (docRef) => {
-                // Return demo data
                 return {
                     exists: () => true,
                     data: () => demoGalaxyData
@@ -317,29 +314,28 @@
             }
         };
 
-        // Lấy galaxy ID từ URL
         const urlParams = new URLSearchParams(window.location.search);
         const galaxyId = urlParams.get('id');
-        const isDemo = urlParams.get('demo') === '1' || !galaxyId; // Auto demo if no ID
+        const isDemo = urlParams.get('demo') === '1' || !galaxyId;
 
         const demoGalaxyData = {
             messages: [
-                "I love you so much! ❤️",
-                "Our Anniversary",
-                "I love you 💖",
-                "08/05/2009",
-                "Thank you for being my sunshine",
-                "Thank you for being my everything 💕",
-                "You are my universe",
-                "There is no other",
-                "You're amazing",
-                "You make my heart smile",
-                "Love ya! 💖",
-                "Honey bunch, you are my everything!",
-                "Forever and always",
-                "My heart belongs to you",
-                "Together forever 💕",
-                "Sweet dreams my love"
+               "I appreciate you so much! 😊",
+                "Our Friendiversary",
+                "You're an awesome friend 💛",
+                "Thanks for always brightening my day",
+                "Thanks for being such a great friend 💫",
+                "You’re such a big part of my world",
+                "Friends like you are one in a million",
+                "You're an incredible friend",
+                "You always lift my spirits",
+                "Much love, buddy! 💛",
+                "Bestie, you're the best!",
+                "Friends forever!",
+                "You’ll always have a special place in my life",
+                "Sticking together always 🤝",
+                "Sleep well, my friend ✨"
+
             ],
             icons: ["♥", "💖", "❤️", "💕", "🌟", "✨"],
             colors: {
