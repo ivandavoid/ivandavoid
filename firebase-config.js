@@ -3,7 +3,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import { getFirestore, collection, addDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
 
-// Cấu hình Firebase của bạn
 const firebaseConfig = {
   apiKey: "AIzaSyDjaY0NIvmTemxkiFfInuwammNT1KoV8Bk",
   authDomain: "staynowapp1.firebaseapp.com",
@@ -15,7 +14,6 @@ const firebaseConfig = {
   measurementId: "G-HL2349KPLW"
 };
 
-// Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
